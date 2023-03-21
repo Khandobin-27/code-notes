@@ -1,0 +1,29 @@
+# macOS system files to ignore
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS folder metadata to ignore
+._*
+.Spotlight-V100
+.Trashes
+__MACOSX/
+
+# Node.js dependencies to ignore
+node_modules/
+
+# Editor files to ignore
+.vscode/
+.idea/
+
+# Logs and build files to ignore
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+build/
+dist/
+
+# Ignore .env file
+.env
