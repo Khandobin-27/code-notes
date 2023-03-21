@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- in server.js we need app.use() to make it work -->
+    <link rel="stylesheet" href="/styles.css">
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/base16/chalk.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/a11y-dark.min.css"> -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <main>
+        <section class="code-wrapper"> 
+            <%- include('_panel.ejs') %>
+            <aside class="code-numbering">
+                <% for (let i = 1; i <= code.split('\n').length; i++) { %>
+                    <div><%= i %></div>
+                <% } %>
+            </aside>
+
+            <pre><code data-code-editor class="code-editor <%= locals.language ? `language-${locals.language}` : ""  %>"><%= code  %></code></pre>
+        </section>
+    </main>
+</body>
+</html>

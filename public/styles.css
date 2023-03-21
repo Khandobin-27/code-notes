@@ -1,0 +1,121 @@
+:root {
+    --primary-color: rgb(105, 221, 184);
+    --text-color: #d6deeb;
+    --background-color: #011627;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    font-size: 10px;
+}
+
+body {
+    background-color: var(--background-color);
+    font-size: 18px;
+}
+
+.code-wrapper {
+    padding: 4rem 1.4rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.code-numbering {
+    color: var(--primary-color);
+}
+
+.code-numbering div {
+    color: var(--text-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    text-align: left;
+    font-family: monospace;
+}
+
+pre {
+    margin: 0;
+}
+
+[data-code-editor] {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+textarea {
+    background-color: transparent;
+    resize: none;
+    width: 100%;
+    border: none;
+    outline: none;
+    caret-color: var(--primary-color);
+    min-height: calc(100vh - 4rem);
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+
+.panel-wrapper {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    opacity: .15;
+    transition: opacity 200ms ease-in-out;
+    background-color: var(--text-color);
+    padding: 1.6rem;
+
+}
+
+.panel-wrapper:hover {
+    opacity: 1;
+
+}
+
+.panel-wrapper:hover .logo {
+    color: var(--background-color);
+
+}
+
+
+.logo {
+    font-size: 4rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--background-color);
+    width: 100%;
+    display: inline-block;
+}
+
+.logo:hover {
+    text-decoration: underline;
+}
+
+.panel-buttons {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.panel-buttons > * + * {
+    margin-left: .5rem;
+}
+
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    background: none;
+    border: 1px solid var(--background-color);
+    color: var(--background-color);
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    transition: background-color 200ms ease-in-out;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: var(--background-color);
+    color: white;
+}
