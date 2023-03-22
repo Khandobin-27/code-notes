@@ -1,16 +1,20 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const favicon = require('serve-favicon');
+const path = require('path');
 require('dotenv').config();
 const Document = require('./models/Document') 
 
 const app = express()
-const PORT = process.env.PORT || 3030;
+const PORT = process.env.PORT || 3030; 
 
 app.set('views', './views');
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 //get the form data
 app.use(express.urlencoded({ extended: true }))
+// Serve favicon
+app.use(favicon(path.join(__dirname, 'public', 'favicon.png'))) 
 
 
 //database

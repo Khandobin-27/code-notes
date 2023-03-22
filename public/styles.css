@@ -60,19 +60,20 @@ textarea {
 
 .panel-wrapper {
     position: fixed;
-    top: 30px;
-    right: 30px;
-    opacity: .15;
+    top: 21px;
+    right: 15px;
+    /* opacity: .15; */
     transition: opacity 200ms ease-in-out;
-    background-color: var(--text-color);
+    /* background-color: var(--text-color); */
     padding: 1.6rem;
 
 }
 
-.panel-wrapper:hover {
+
+/* .panel-wrapper:hover {
     opacity: 1;
 
-}
+} */
 
 .panel-wrapper:hover .logo {
     color: var(--background-color);
@@ -100,15 +101,15 @@ textarea {
 }
 
 .panel-buttons > * + * {
-    margin-left: .5rem;
+    margin-left: 1rem;
 }
 
 .btn {
     display: inline-block;
     cursor: pointer;
     background: none;
-    border: 1px solid var(--background-color);
-    color: var(--background-color);
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
     border-radius: .5rem;
     padding: .5rem 1rem;
     transition: background-color 200ms ease-in-out;
@@ -118,4 +119,18 @@ textarea {
 .btn:hover {
     background-color: var(--background-color);
     color: white;
+}
+
+
+
+
+@media(max-width: 769px) {
+    .code-wrapper {
+        padding-top: 14rem;
+    }
+
+    .panel-wrapper {
+        top: 5px;
+        right: 5px;
+    }
 }
