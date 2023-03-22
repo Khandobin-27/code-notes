@@ -19,7 +19,7 @@ body {
 }
 
 .code-wrapper {
-    padding: 4rem 1.4rem;
+    padding: 12rem 1.4rem;
     display: flex;
     gap: 1rem;
 }
@@ -38,9 +38,14 @@ body {
 
 pre {
     margin: 0;
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 [data-code-editor] {
+    display: block;
+    max-width: 100%; 
+    overflow: auto;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
 }
@@ -114,6 +119,8 @@ textarea {
     padding: .5rem 1rem;
     transition: background-color 200ms ease-in-out;
     text-decoration: none;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .btn:hover {
@@ -132,5 +139,13 @@ textarea {
     .panel-wrapper {
         top: 5px;
         right: 5px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+
+    body {
+        font-size: 16px;
     }
 }
