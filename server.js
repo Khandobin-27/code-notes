@@ -32,10 +32,16 @@ db.once("open", function () {
 
 
 app.get('/', (req, res)=> {
-const code = `Welcome to the e-notes! 
+const code = `Welcome to the CodeNotes! 
 
-PLease explore the most efficient way of sharing notes!
-Here is another line of code!`
+Please explore the most efficient way of sharing notes!
+
+Just simply press NEW button and paste the code that you would like to share
+Click save and recieve the unique url for your code snippet with correct language formatting
+Send the link to your friend or colleage for better collaboration
+
+And thats it! :) Simple and important as brushing your teeth
+This project is free so you can support its creator by wishing him all the best`
     res.render('code-display', { code, language: 'plaintext'})
 })
 
